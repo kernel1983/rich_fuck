@@ -76,8 +76,7 @@ class VM:
                 self.pc += 1
 
         elif self.code[self.pc] == GO:
-            # print('GO')
-            if self.tape[self.head] == 0:
+            if self.tape[self.head] > 0:
                 while self.code[self.pc] != IF:
                     self.pc -= 1
                     # print(self.pc)
