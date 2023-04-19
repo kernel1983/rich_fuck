@@ -37,9 +37,10 @@ class AddHandler(tornado.web.RequestHandler):
         timestamp = ts
 
         self.finish({'task':AddHandler.task_start, 'test':[
-            {'input': [1, 2, 0], 'output': [0, 0, 3]},
-            {'input': [2, 2, 0], 'output': [0, 0, 4]},
-            {'input': [3, 2, 0], 'output': [0, 0, 5]},
+            [[3, 2, 0], [2, 5]],
+            [[1, 1, 0], [2, 2]],
+            [[1, 2, 0], [2, 3]],
+            [[2, 2, 0], [2, 4]],
         ]})
         AddHandler.task_start += 10000000
 
